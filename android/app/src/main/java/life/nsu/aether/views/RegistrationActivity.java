@@ -18,6 +18,9 @@ import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import life.nsu.aether.R;
 import life.nsu.aether.viewModels.RegistrationActivityViewModel;
 
@@ -54,7 +57,7 @@ public class RegistrationActivity extends AppCompatActivity {
             String password = mPassword.getText().toString();
             String confirmPassword = mConfirmPassword.getText().toString();
 
-            if (!validation(password, confirmPassword)) {
+            if (!validation(email, password, confirmPassword)) {
                 return;
             }
 
@@ -86,7 +89,27 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
-    private boolean validation(String password, String confirmPassword) {
+    private boolean validation(String email, String password, String confirmPassword) {
+        if (email.isEmpty()) {
+            mSignUp.setError("Add an email");
+            return false;
+        }
+
+        final Pattern valid_email_address_pattern =
+                Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+        Matcher matcher = valid_email_address_pattern.matcher(email);
+
+        if (!matcher.find()) {
+            mSignUp.setError("Email address is wrong");
+            return false;
+        }
+
+        if (password.length() < 6) {
+            mSignUp.setError("Password should be at least 6 character long");
+            return false;
+        }
+
         if (type.equals("null")) {
             mSignUp.setError("Select type");
 
@@ -98,6 +121,6 @@ public class RegistrationActivity extends AppCompatActivity {
             return false;
         }
 
-        return password.length() >= 6;
+        return true;
     }
 }
