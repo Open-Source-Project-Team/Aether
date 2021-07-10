@@ -1,9 +1,14 @@
+<!--
+  ~ ic_left_arrow_rounded.xml Created by Naimul Kabir
+  ~ Last modified  7/10/21, 9:32 PM
+  -->
+
 <vector android:height="24dp" android:viewportHeight="40"
     android:viewportWidth="40" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
         android:pathData="M39,20L39,20A19,19 0,0 1,20 39L20,39A19,19 0,0 1,1 20L1,20A19,19 0,0 1,20 1L20,1A19,19 0,0 1,39 20z"
-        android:strokeColor="#000000" android:strokeWidth="2"/>
-    <path android:fillColor="#000000"
+        android:strokeColor="#aaaaaa" android:strokeWidth="2"/>
+    <path android:fillColor="#aaaaaa"
         android:pathData="M14.6667,20.2268L13.4596,20.2268L14.3131,21.0804L17.7235,24.4908L18.0771,24.1372L17.7235,24.4908C17.8121,24.5793 17.8121,24.7229 17.7235,24.8114C17.635,24.8999 17.4914,24.8999 17.4029,24.8114L12.7519,20.1605C12.6633,20.0719 12.6633,19.9284 12.7519,19.8398L12.3983,19.4863L12.7519,19.8398L17.4026,15.189C17.4471,15.1445 17.5044,15.1224 17.5631,15.1224C17.6217,15.1224 17.679,15.1445 17.7234,15.1888C17.812,15.2774 17.812,15.4209 17.7234,15.5095L17.7234,15.5095L14.3131,18.9199L13.4596,19.7734L14.6667,19.7734L27.0879,19.7734C27.2131,19.7734 27.3146,19.875 27.3146,20.0001C27.3146,20.1253 27.2131,20.2268 27.0879,20.2268L14.6667,20.2268Z"
-        android:strokeColor="#000000" android:strokeWidth="1"/>
+        android:strokeColor="#aaaaaa" android:strokeWidth="1"/>
 </vector>
